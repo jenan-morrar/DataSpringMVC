@@ -16,6 +16,7 @@
 	<description>First Project in Spring MVC</description>
 	<properties>
 		<java.version>11</java.version>
+        <start-class>com.test.mvc.MvcApplication</start-class>
 	</properties>
 	<dependencies>
 		<dependency>
