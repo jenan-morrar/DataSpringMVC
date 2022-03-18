@@ -32,4 +32,20 @@ public  class BookService {
             return null;
         }
     }
+    
+    // edit a book 
+    public Book updateBook(Long id, String title, String desc, String lang, int numOfPages) {
+    	Book book = findBook(id);
+    	book.setId(id);
+    	book.setTitle(title);
+    	book.setDescription(desc);
+    	book.setLanguage(lang);
+    	book.setNumberOfPages(numOfPages);
+    	return bookRepository.save(book);
+    }
+    
+    // delete a book 
+    public void deleteBook(Long id) {
+    	bookRepository.deleteById(id);
+    }
 }
